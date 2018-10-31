@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Comp 425 Homework</title>
+    <link rel="stylesheet" href="../standard.css" type="text/css"/>
+    <style>
+      ol > li { margin-bottom: 4em; }
+    </style>
+  </head>
+  <body>
+    <ol>
+      <li>
+        <p>
+          Write a program named <code>counter.cpp</code> which increments then
+          prints a counter every second.  The program should run until the
+          user presses enter.
+        </p>
+        Hints:
+        <ul>
+          <li>Make a thread which continually increments, prints, then
+            sleeps.</li>
+          <li>Use a global boolean variable to control the thread's loop.</li>
+          <li>Use <code>std::getline</code> (or <code>std::ignore</code>) on
+            the main thread to wait for the user to press enter.
+          </li>
+          <li>
+            Set the global variable to false, then just wait for the thread to
+            exit.
+          </li>
+        </ul>
+      </li>
+      <li>Write a program named <code>letters.cpp</code> which runs for 20
+        seconds.  The program should consist of three threads.
+        <ul>
+          <li>The first thread should print the letter "A" every second</li>
+          <li>The second thread should prints the letter "B" every 2
+          seconds</li>
+          <li>The third thread should print the letter "C" every 5 seconds</li>
+        </ul>
+        You <em>must</em> use the same function for all three threads; use
+        parameters to alter each thread&rsquo;s behavior.
+        <p class="top">Hints:</p>
+        <ul>
+          <li>You do not have to check the actual time&mdash;e.g., you may
+            assume that if you sleep 10 times for 2 seconds each time then it
+            has been 20 seconds</li>
+          <li>
+            Use <code>std::unitbuf</code> to turn off buffering
+            for <code>std::cout</code>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </body>
+</html>
